@@ -35,6 +35,30 @@ export const CheckoutForm = () => {
     setIsSubmitting(true);
     
     try {
+      // First, save customer data to database
+      const { supabase } = await import("@/integrations/supabase/client");
+      
+      const { error: dbError } = await supabase
+        .from('customers')
+        .upsert({
+          full_name: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          amount: "1999",
+          payment_status: 'pending'
+        }, {
+          onConflict: 'email'
+        });
+
+      if (dbError) {
+        console.error("Database error:", dbError);
+        toast.error("ডেটা সেভ করতে সমস্যা হয়েছে", {
+          description: "দয়া করে আবার চেষ্টা করুন।",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
       // Create payment charge via UddoktaPay
       const paymentResponse = await createPaymentCharge({
         full_name: data.fullName,

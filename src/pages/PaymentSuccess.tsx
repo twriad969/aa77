@@ -26,6 +26,20 @@ export default function PaymentSuccess() {
         const result = await verifyPayment(invoiceId);
         
         if (result.status === 'COMPLETED') {
+          // Update customer payment status in database
+          const { supabase } = await import("@/integrations/supabase/client");
+          
+          await supabase
+            .from('customers')
+            .update({
+              payment_status: 'completed',
+              invoice_id: result.invoice_id,
+              transaction_id: result.transaction_id,
+              payment_method: result.payment_method,
+              purchased_at: new Date().toISOString()
+            })
+            .eq('email', result.email);
+          
           setPaymentData(result);
           setStatus('success');
         } else if (result.status === 'PENDING') {
@@ -106,9 +120,14 @@ export default function PaymentSuccess() {
                 </p>
               </div>
 
-              <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-                <Link to="/" className="bangla">হোমে ফিরে যান</Link>
-              </Button>
+              <div className="flex gap-4">
+                <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                  <Link to="/course" className="bangla">কোর্সে যান</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link to="/" className="bangla">হোমে ফিরে যান</Link>
+                </Button>
+              </div>
             </div>
           )}
 
